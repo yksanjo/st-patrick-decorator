@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 St. Patrick's Day Decorator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>🍀 St. Patrick's Day Decorator 🍻</h1>
+            <p class="subtitle">Create your lucky decorations for St. Paddy's Day</p>
+        </header>
+
+        <div class="main-content">
+            <div class="clover-section">
+                <div class="clover-container" id="cloverContainer">
+                    <svg id="cloverSvg" viewBox="0 0 400 400">
+                        <!-- Pot of gold -->
+                        <ellipse cx="200" cy="340" rx="100" ry="30" fill="#8B4513" />
+                        <rect x="110" y="280" width="180" height="60" rx="5" fill="#8B4513" />
+                        <ellipse cx="200" cy="280" rx="90" ry="20" fill="#654321" />
+                        
+                        <!-- Gold coins -->
+                        <ellipse cx="170" cy="270" rx="25" ry="10" fill="#FFD700" />
+                        <ellipse cx="200" cy="265" rx="25" ry="10" fill="#FFA500" />
+                        <ellipse cx="230" cy="270" rx="25" ry="10" fill="#FFD700" />
+                        
+                        <!-- Rainbow -->
+                        <path d="M50 350 Q200 200 350 350" stroke="url(#rainbow)" stroke-width="20" fill="none" />
+                        <defs>
+                            <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#FF0000" />
+                                <stop offset="16%" stop-color="#FF7F00" />
+                                <stop offset="33%" stop-color="#FFFF00" />
+                                <stop offset="50%" stop-color="#00FF00" />
+                                <stop offset="66%" stop-color="#0000FF" />
+                                <stop offset="83%" stop-color="#4B0082" />
+                                <stop offset="100%" stop-color="#9400D3" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    
+                    <div class="decoration-zone" id="decorationZone"></div>
+                </div>
+                
+                <div class="clover-controls">
+                    <div class="control-group">
+                        <label>
+                            <span>Size</span>
+                            <input type="range" id="size" min="0.8" max="1.5" step="0.1" value="1">
+                            <span class="value" id="sizeValue">100%</span>
+                        </label>
+                    </div>
+                    <div class="button-group">
+                        <button class="action-btn" id="clearBtn">🗑️ Clear All</button>
+                        <button class="action-btn" id="exportBtn">📸 Export</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="decorations-panel">
+                <div class="decorations-section">
+                    <h3>🍀 Clovers</h3>
+                    <div class="decorations-grid">
+                        <div class="decoration-item" data-type="clover" draggable="true">
+                            <div class="decoration-preview">🍀</div>
+                            <span>Clover</span>
+                        </div>
+                        <div class="decoration-item" data-type="four-leaf" draggable="true">
+                            <div class="decoration-preview">☘️</div>
+                            <span>4-Leaf</span>
+                        </div>
+                        <div class="decoration-item" data-type="shamrock" draggable="true">
+                            <div class="decoration-preview">🌿</div>
+                            <span>Shamrock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decorations-section">
+                    <h3>🎉 Lucky Items</h3>
+                    <div class="decorations-grid">
+                        <div class="decoration-item" data-type="pot" draggable="true">
+                            <div class="decoration-preview">🫕</div>
+                            <span>Pot of Gold</span>
+                        </div>
+                        <div class="decoration-item" data-type="coin" draggable="true">
+                            <div class="decoration-preview">🪙</div>
+                            <span>Gold Coin</span>
+                        </div>
+                        <div class="decoration-item" data-type="rainbow" draggable="true">
+                            <div class="decoration-preview">🌈</div>
+                            <span>Rainbow</span>
+                        </div>
+                        <div class="decoration-item" data-type="leprechaun" draggable="true">
+                            <div class="decoration-preview">🎩</div>
+                            <span>Leprechaun</span>
+                        </div>
+                        <div class="decoration-item" data-type="beer" draggable="true">
+                            <div class="decoration-preview">🍺</div>
+                            <span>Beer</span>
+                        </div>
+                        <div class="decoration-item" data-type="flag" draggable="true">
+                            <div class="decoration-preview">🇮🇪</div>
+                            <span>Flag</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decorations-section">
+                    <h3>✨ Decorations</h3>
+                    <div class="decorations-grid">
+                        <div class="decoration-item" data-type="sparkle" draggable="true">
+                            <div class="decoration-preview">✨</div>
+                            <span>Sparkle</span>
+                        </div>
+                        <div class="decoration-item" data-type="star" draggable="true">
+                            <div class="decoration-preview">⭐</div>
+                            <span>Star</span>
+                        </div>
+                        <div class="decoration-item" data-type="heart" draggable="true">
+                            <div class="decoration-preview">💚</div>
+                            <span>Heart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
